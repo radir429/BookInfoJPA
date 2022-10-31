@@ -37,6 +37,11 @@ spring.jpa.show-sql=false
 spring.jpa.hibernate.ddl-auto=update
 ```
 
+![image](https://user-images.githubusercontent.com/91974804/198935671-905b2248-2c88-4435-b3a7-ea1b5966a963.png)
+
+구조
+
+
 1. JPA 배운거 클론 코딩 해봤음
 2. 생각보다 나쁘지 않게 완성했음
 3. ref 1 에서 보완한 점은 도서 대여를 약간 응용해서 도서 반납도 추가해봤음
