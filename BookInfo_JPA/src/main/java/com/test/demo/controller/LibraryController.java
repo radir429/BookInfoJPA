@@ -95,6 +95,12 @@ public class LibraryController {
 		return new ResponseEntity<>(libraryService.lendABook(requests), HttpStatus.OK);
 	}
 	
+	@ApiOperation(value="도서 반납", notes="도서를 반납한다")
+	@PostMapping("/book/return")
+	public ResponseEntity<List<String>> returnABook(@RequestBody BookLendRequest requests){
+		return new ResponseEntity<>(libraryService.returnABook(requests), HttpStatus.OK);
+	}
+	
 	@ApiOperation(value="저자 목록 조회", notes="저자 목록을 조회한다")
 	@GetMapping("/author")
 	public ResponseEntity<List<Author>> readAuthors(){

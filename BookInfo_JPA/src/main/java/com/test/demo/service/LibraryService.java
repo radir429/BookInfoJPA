@@ -133,6 +133,33 @@ public class LibraryService {
 		return bookApprovedToBorrow;
 	}
 	
+	
+	public List<String> returnABook(BookLendRequest request){
+		Optional<Member> memberForId = memberRepository.findById(request.getMemberId());
+		if(memberForId.isEmpty()) {
+			throw new EntityNotFoundException("회원정보가 없습니다");
+		}
+
+		List<String> bookConfirmToReturn = new ArrayList<>();
+		request.getBookIds().forEach(bookId ->{
+			Optional<Book> bookForId = bookRepository.findById(bookId);
+			if(bookForId.isEmpty()) {
+				throw new EntityNotFoundException("해당하는 도서가 없습니다");
+			}
+			Optional<Lend> borrowedBook = lendRepository.findByBookAndStatus(bookForId.get(), LendStatus.BORROWED);
+			if(borrowedBook.isPresent()) {
+				bookConfirmToReturn.add(bookForId.get().getName());
+				Lend lend = borrowedBook.get();
+				lend.setReturnOn(Instant.now());
+				lend.setStatus(LendStatus.RETURNED);
+				
+				lendRepository.save(lend);				
+			}
+		});
+		
+		return bookConfirmToReturn;
+	}
+	
 	public List<Author> readAuthors() {
 		return authorRepository.findAll();
 	}
