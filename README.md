@@ -1,11 +1,6 @@
 # BookInfoJPA
 borrow and return a book
 
-ref 1. [[로켓 학습] 스프링부트 CRUD REST API (JPA, MySQL, Gradle)](https://covenant.tistory.com/243) 
-
-ref 2. [[spring 토이프로젝트] REST API CRUD 구현하기-1. 프로젝트 생성, Model, Repository](https://velog.io/@rg970604/spring-%ED%86%A0%EC%9D%B4%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-REST-API-CRUD-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
-
-ref 3. [[Git] GitHub README 작성법 (마크다운, 이미지, Gif, 코드 블록 사용법)](https://coding-factory.tistory.com/620)
 
 ![image](https://user-images.githubusercontent.com/91974804/198932459-55feebfa-50f4-456b-a923-c722747295f4.png)
 
@@ -50,6 +45,11 @@ spring.jpa.hibernate.ddl-auto=update
 6. 마크다운도 약간 배우고 나니 쓸만함을 느낌
 7. STS, Git 연동은 아직도 불편함
 
+ref 1. [[로켓 학습] 스프링부트 CRUD REST API (JPA, MySQL, Gradle)](https://covenant.tistory.com/243) 
+
+ref 2. [[spring 토이프로젝트] REST API CRUD 구현하기-1. 프로젝트 생성, Model, Repository](https://velog.io/@rg970604/spring-%ED%86%A0%EC%9D%B4%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-REST-API-CRUD-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
+
+ref 3. [[Git] GitHub README 작성법 (마크다운, 이미지, Gif, 코드 블록 사용법)](https://coding-factory.tistory.com/620)
 
 
 
